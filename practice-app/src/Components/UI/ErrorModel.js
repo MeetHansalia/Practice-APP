@@ -1,10 +1,14 @@
+import React from 'react'
 import Button from "./Button"
 import Card from "./Card"
 import classes from './ErrorModel.module.css'
 
+
+
+
 const ErrorModel =(props)=>{
     return(
-        <div>
+        <React.Fragment>
             <div className={classes.backdrop} onClick={props.onConfirm}></div>
             <Card className={classes.modal}>
                 <header className={classes.header}> 
@@ -17,7 +21,7 @@ const ErrorModel =(props)=>{
                     <Button onClick={props.onConfirm}> Okay </Button>
                 </footer>
             </Card>
-        </div>
+        </React.Fragment>
     )
 }
 
